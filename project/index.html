@@ -12,25 +12,78 @@
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 
+
+<script>
+    $(document).ready(function(){
+      $("#login").submit(function(e){
+          e.preventDefault()
+          token = $("#_csrf").val();
+          user=$("#userid").val();
+          pass=$("#pw").val();
+          setter='off';
+          if ($('#setter').is(":checked"))
+        {
+            setter='on';
+        }
+         
+          $.ajax({
+            headers: {
+            'CSRF-Token': token 
+            } ,
+              
+              url:"/login",
+              method:"post",
+              contentType:"application/x-www-form-urlencoded",
+              data:{
+                  user:user,
+                  password:pass,
+                  setcookie:setter
+              },
+              complete:function(){
+                  
+              },
+              success:function(data){
+                  if (data == "logged"){
+                    window.location = '/login';
+                  }
+                  else{
+
+                  alert(data);
+                  }
+
+              },
+              error:function(data){
+                  alert('something went wrong')
+              }
+          }) 
+        });
+      });
+  </script>
+
+
 <body>
     <div class="login-form">
-        <form action="" method="post">
+        <form id="login">
             <h2 class="text-center">Log in</h2>
+            <input type="hidden" id="_csrf" value="<%= csrfToken %>">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" required="required">
+                <input type="text" class="form-control" placeholder="Username" required="required" id="userid" >
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="required">
+                <input type="password" class="form-control" placeholder="Password" required="required" id="pw">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Log in</button>
             </div>
             <div class="clearfix">
-                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                <label class="pull-left checkbox-inline">
+                    <input type="checkbox" id='setter'>
+                 Remember me</label>
                 <a href="#" class="pull-right">Forgot Password?</a>
             </div>
+
         </form>
-        <p class="text-center"><a href="#">Create an Account</a></p>
+        <p class="text-center"><a href="/create">Create an Account</a></p>
     </div>
 </body>
 
