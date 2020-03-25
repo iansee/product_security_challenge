@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  console.log(document.cookie)
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      var value= c.substring(name.length, c.length);
+      console.log(value)
+      
+      return value
+    }
+  }
+  return "";}
+
+  function remove(cname){
+    cname = cname.substring(2)
+    var obj = JSON.parse(cname);
+    document.getElementById('username').innerHTML = obj.username;
+  
+}
+
+function logout(){
+  window.location.replace("/");
+}
+
+</script>
+<body onload="remove(getCookie('local')) "></body>
+<div>
+  Logged in as
+  <label id = 'username'></label>
+</div>
+<button  class="btn btn-primary btn-block" onclick="logout()">Log out</button>
+
+
+
+</html>

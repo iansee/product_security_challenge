@@ -1,0 +1,31 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "Simple project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iansee/product_security_challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iansee/product_security_challenge/issues"
+  },
+  "homepage": "https://github.com/iansee/product_security_challenge#readme",
+  "devDependencies": {
+    "body-parser": "^1.19.0"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "ejs": "^3.0.1",
+    "express-sanitizer": "^1.0.5",
+    "lowdb": "^1.0.0",
+    "password-checker": "^0.2.4",
+    "salted-md5": "^4.0.2"
+  }
+}
