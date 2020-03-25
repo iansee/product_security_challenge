@@ -5,12 +5,19 @@
       "salt": "6882af71f8eb5ad2a6fb74ee46c760934a13a196c1613e478e6766efb502f060",
       "hash": "9e12d4d11d91695afd9a1f71879e899c",
       "email": "asd@hotmail.com",
-      "tries": 2
+      "tries": 3
     },
     {
       "username": "asd123",
       "salt": "35c980d3e5f82efc51ef8c46d4dded645f6b8ba59a1a16f73849b88f6e0b9d6b",
       "hash": "ada448d6c6ced1b322968e109624044d",
+      "email": "asd@hotmail.com",
+      "tries": 0
+    },
+    {
+      "username": "fuck2",
+      "salt": "5badec14553eb0887857b2199dc15afa3641388c44cd4ad81b726615129f57aa",
+      "hash": "6d217de9d0cf81e29725b8753052c7da",
       "email": "asd@hotmail.com",
       "tries": 0
     }

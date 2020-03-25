@@ -33,8 +33,9 @@ Thank you!
 
 ------------
 Work done 
-Backend server only express with no routing - basic security implementation
-Improvements needed
+Backend server only express with no routing - basic security implementation  
+Used serialized json as database instead of proper db system such as sqlite/mongodb  
+Coding improvements needed
 -routing framework not implemented
 -proper cookie procedure not implemented
 -callback from html to backend needs alot of improvement

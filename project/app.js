@@ -11,8 +11,7 @@ const crypto = require('crypto')
 const saltedMd5 = require('salted-md5');
 const expressSanitizer = require('express-sanitizer');
 
-var Recaptcha = require('express-recaptcha').RecaptchaV3;
-var recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY',{callback:'cb'});
+
 
 
 var cookieParser = require('cookie-parser')
