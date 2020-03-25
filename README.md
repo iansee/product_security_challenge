@@ -33,8 +33,11 @@ Thank you!
 
 ------------
 Work done 
-Backend server only express with no routing - basic security implementation
-Improvements needed
--routing framework not implemented
--proper cookie procedure not implemented
--callback from html to backend needs alot of improvement
+Backend server only express with no routing - basic security implementation  
+Instructions:  
+  -git pull  
+  -npm install  
+Improvements needed  
+-routing framework not implemented  
+-proper cookie procedure not implemented  
+-callback from html to backend needs alot of improvement  
