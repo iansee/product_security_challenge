@@ -40,7 +40,7 @@ Coding improvements needed
 -proper cookie procedure not implemented  
 -callback from html to backend needs alot of improvement  
 
-Instructions
+Instructions  
 git pull  
 npm install  
 node app.js  
