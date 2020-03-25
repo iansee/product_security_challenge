@@ -15,14 +15,14 @@ In this repository, there are the following files:
 
 As part of the challenge, you need to implement an authentication mechanism with as many of the following features as possible. It is a non exhaustive list, so feel free to add or remove any of it as deemed necessary.
 
-1. Input sanitization and validation
-2. Password hashed
+1. Input sanitization and validation [simple XSS username and password validation server side]
+2. Password hashed [32 bit salt and md5 hash]
 3. Prevention of timing attacks
 4. Logging
-5. CSRF prevention
+5. CSRF prevention [implemented with csurf]
 6. Multi factor authentication
 7. Password reset / forget password mechanism
-8. Account lockout
+8. Account lockout [implemented with tries]
 9. Cookie
 10. HTTPS
 11. Known password check
@@ -30,3 +30,11 @@ As part of the challenge, you need to implement an authentication mechanism with
 You will have to create a simple binary (platform of your choice) to provide any server side functionality you may require. Please document steps to run the application. Your submission should be a link to your Github repository which you've already forked earlier together with the source code and binaries.
 
 Thank you!
+
+------------
+Work done 
+Backend server only express with no routing - basic security implementation
+Improvements needed
+-routing framework not implemented
+-proper cookie procedure not implemented
+-callback from html to backend needs alot of improvement
